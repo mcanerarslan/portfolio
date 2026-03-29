@@ -1,128 +1,293 @@
 <!DOCTYPE html>
-<html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mahmut Caner Arslan | Bilgisayar Mühendisliği Öğrencisi</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="hero">
-      <div class="hero__content">
-        <p class="hero__eyebrow">Bilgisayar Mühendisliği Öğrencisi</p>
-        <h1>Mahmut Caner Arslan</h1>
-        <p class="hero__lead">
-          Algoritma problemlerine ve kullanıcı odaklı çözümlere meraklı bir
-          mühendis adayıyım. Takım projelerinde hem teknik hem iletişim yönümü
-          ön plana çıkarmaya çalışırım.
-        </p>
-        <div class="hero__cta">
-          <a class="btn" href="#projeler">Projelerimi İncele</a>
-          <a class="btn btn--outline" href="#iletisim">İletişim</a>
-        </div>
-      </div>
-      <div class="hero__card">
-        <p>Üniversite: İstanbul Teknik Üniversitesi</p>
-        <p>Bölüm: Bilgisayar Mühendisliği</p>
-        <p>Yıl: 3. sınıf</p>
-      </div>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio WebPage</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>M. Caner Arslan</h1>
+        <nav>
+            <a href="#pages">Home</a>
+            <a href="#about">About</a>
+            <a href="#project">Project</a>
+            <a href="#skill">Skill</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
+    <div id="pages">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h3 style="font-weight: normal;">Hi, I'm M. Caner Arslan 👋 </h3>
+                    <h1 class="section-title" style="margin-top: -15px;">SOFTWARE DEVELOPER</h1>
 
-    <main>
-      <section class="section" id="hakkimda">
-        <div class="section__header">
-          <h2>Hakkımda</h2>
-          <p>
-            Yazılım geliştirme süreçlerinde tutkulu bir öğrenici olarak hem front-end
-            hem back-end teknolojilerine göz atıyorum. Analitik bakış açım ile
-            problemlere yapısal çözümler üretmeye çalışıyorum.
-          </p>
-        </div>
-        <div class="chips">
-          <span>Python</span>
-          <span>JavaScript</span>
-          <span>React</span>
-          <span>Docker</span>
-          <span>Algoritmalar</span>
-        </div>
-      </section>
+                    <div class="hero-buttons"> <button class="blue-btn-soft"><i class="ri-arrow-right-line"></i> Contact Me</button>
+                        <button class="blue-btn-outline"><i class="ri-download-line"></i> Download CV</button>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div id="about-photo" class="img"></div>
+                </div>
 
-      <section class="section" id="projeler">
-        <div class="section__header">
-          <h2>Projeler</h2>
-          <p>
-            Aşağıda hem bireysel hem de takım halinde geliştirdiğim bazı çalışmalar
-            yer alıyor. Her biri bana yeni bir beceri kazandırdı.
-          </p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <h3>Akıllı Ders Planlayıcı</h3>
-            <p>
-              Üniversite takvimine göre dersleri, ödevleri ve sınavları
-              senkronize eden, Python Flask ve PostgreSQL ile yazılmış bir web
-              uygulaması.
+            </div>
+        </section>
+        <section id="about">
+            <h1 class="section-title">About Me</h1>
+            <div id="about-photo"></div>
+            <p style="text-indent: 25px; padding: 0 100px; letter-spacing: 0.4px; word-spacing: 3px;">Hello, I’m Mahmut
+                Caner Arslan. I study Computer Engineering and I am
+                passionate about web development, user interface design, and real-world digital products. I enjoy
+                transforming ideas into clean, functional,
+                and visually strong websites.
+                <br>
+                My background combines technology and entrepreneurship. While improving myself in software development,
+                I also work on digital projects in the real estate industry. This gives me a practical perspective on
+                building systems that are not only visually appealing but also useful, fast, and business-oriented.
+                <br>
+                I am especially interested in frontend development, responsive design, modern JavaScript frameworks, and
+                creating professional web experiences that strengthen brands online.
             </p>
-            <ul>
-              <li>REST API tasarımı</li>
-              <li>Veri görselleştirme</li>
-              <li>JWT tabanlı kimlik doğrulama</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <h3>Mobil Uyumlu Portföy</h3>
-            <p>
-              React ve CSS Grid kullanan, performansa odaklı tek sayfa uygulama.
-              Her cihaz için adapte olan bir deneyim sunar.
-            </p>
-            <ul>
-              <li>Responsive tasarım</li>
-              <li>Component bazlı mimari</li>
-              <li>CI/CD Github Actions</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <h3>Veri Analiz Dashboard</h3>
-            <p>
-              Gerçek zamanlı veriyi çeken, D3.js ile görselleştiren ve
-              kullanıcıların kolay filtreleme yapmasını sağlayan interaktif panel.
-            </p>
-            <ul>
-              <li>Socket.io entegrasyonu</li>
-              <li>Unit test altyapısı</li>
-              <li>Modüler bileşenler</li>
-            </ul>
-          </article>
-        </div>
-      </section>
 
-      <section class="section" id="iletisim">
-        <div class="section__header">
-          <h2>İletişime Geç</h2>
-          <p>
-            Projelerimi birlikte genişletmek ya da fikir alışverişi için
-            aşağıdaki kanalları kullanabilirsin.
-          </p>
-        </div>
-        <div class="contact-grid">
-          <div>
-            <p class="contact-label">E-posta</p>
-            <p>mahmutcaner.arslan@example.com</p>
-          </div>
-          <div>
-            <p class="contact-label">LinkedIn</p>
-            <p>linkedin.com/in/mahmutcaner</p>
-          </div>
-          <div>
-            <p class="contact-label">Github</p>
-            <p>github.com/mahmutcanerarslan</p>
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
+        <section id="skill">
+            <h1 class="section-title">Skills</h1>
+            <div class="skill">
+                <div class="skill-tags">
+                    <span>Java</span>
+                    <span>C</span>
+                    <span>Python</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                </div>
+            </div>
+        </section>
+        <section id="project">
+            <h1 class="section-title">Projects</h1>
+            <div class="project-container">
+                <div class="project-card">
+                    <div class="project-card-title">Real Estate Website Platform</div>
+                    <div class="project-card-description">
+                        Subtitle:
+                        Modern Real Estate Web Platform
 
+                        Description:
+                        A real estate-focused website project designed to present property listings in a modern,
+                        professional,
+                        and
+                        SEO-friendly structure. The platform aims to improve listing visibility, user experience, and
+                        brand
+                        trust
+                        through clean design, multilingual presentation, and practical content management.
+
+                        Technologies:
+                        React.js, Next.js, Tailwind CSS, Supabase</div>
+                    <div class="project-card-buttons">
+                        <div class="blue-btn-soft">More Details</div>
+                        <div class="blue-btn-soft">Demo</div>
+                        <div class="blue-btn-soft">Github</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-title">Portfolio & Business Web Interfaces</div>
+                    <div class="project-card-description">
+                        <p>Responsive Web Interface Development
+                            <br>
+                            A collection of responsive interface projects built to improve my frontend development
+                            skills.
+                            These projects focus on layout systems, reusable components, modern styling, and
+                            mobile-friendly structures.
+                            <br>
+                            Technologies:
+                            HTML, CSS, JavaScript, Tailwind CSS
+                        </p>
+                    </div>
+                    <div class="project-card-buttons">
+                        <div class="blue-btn-soft" onclick="location.href='https://ornek.com'">More Details</div>
+                        <div class="blue-btn-soft" onclick="location.href='https://github.com'">Demo</div>
+                        <div class="blue-btn-soft" onclick="location.href='https://ornek.com'">Github</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="experience">
+            <h1 class="section-title">Experience</h1>
+            <div class="experience-timeline">
+                <div class="timeline-group-label">Education</div>
+                <article class="timeline-entry">
+                    <span class="experience-icon">🎓</span>
+                    <div class="timeline-card">
+                        <p class="timeline-date">2023 - 2024</p>
+                        <h3>English Preparatory Class</h3>
+                        <p class="timeline-sub">Istanbul Okan University</p>
+                        <p>Completed an intensive English preparatory program focused on academic reading, writing,
+                            listening, and speaking skills. This process strengthened my communication abilities and
+                            helped me build a solid foundation for continuing my Computer Engineering education in
+                            English.</p>
+                    </div>
+                </article>
+                <article class="timeline-entry">
+                    <span class="experience-icon">🎓</span>
+                    <div class="timeline-card">
+                        <p class="timeline-date">2024 - Ongoing</p>
+                        <h3>Computer Engineering</h3>
+                        <p class="timeline-sub">Istanbul Okan University</p>
+                        <p>Bachelor's degree program focused on software engineering fundamentals, algorithms, and web
+                            interfaces.</p>
+                    </div>
+                </article>
+
+                <div class="timeline-group-label">Community</div>
+                <article class="timeline-entry">
+                    <span class="experience-icon">💼</span>
+                    <div class="timeline-card">
+                        <p class="timeline-date">01.07.2025 - 01.01.2026</p>
+                        <h3>Social Media Team Lead</h3>
+                        <p class="timeline-sub">Huawei Student Developers - Okan University (HSDOKAN)</p>
+                        <ul>
+                            <li>Led the HSDOKAN club's social media operations.</li>
+                            <li>Directed a 6–7 person social media team, managing coordination and task distribution.</li>
+                            <li>Planned content and publishing calendars to keep the accounts consistent and strategic.</li>
+                            <li>Handled the club's event and activity communications on social platforms.</li>
+                            <li>Implemented initiatives to increase the club's digital visibility and engagement.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Social Media</span>
+                            <span>Team Leadership</span>
+                            <span>Content Planning</span>
+                            <span>Coordination</span>
+                            <span>Communication</span>
+                            <span>Engagement</span>
+                        </div>
+                        <p class="timeline-date">01.12.2025 - 28.02.2026</p>
+                        <h3>Project Development Officer</h3>
+                        <p class="timeline-sub">Huawei Student Developers - Okan University (HSDOKAN)</p>
+                        <p>I actively participate in developing web platforms for machinery digitization, reporting, and
+                            remote management by delivering reusable UI modules.</p>
+                        <div class="timeline-tags">
+                            <span>Project Development</span>
+                            <span>Team Collaboration</span>
+                            <span>Event Planning</span>
+                            <span>Organization</span>
+                            <span>Process Management</span>
+                            <span>Strategic Planning</span>
+                            <span>Problem Solving</span>
+                        </div>
+                    </div>
+                </article>
+                <div class="timeline-group-label">Work Experience</div>
+                <article class="timeline-entry">
+                    <span class="experience-icon">💼</span>
+                    <div class="timeline-card">
+                        <p class="timeline-date">01.01.2026 - Present</p>
+                        <h3>Real Estate Consultant</h3>
+                        <p class="timeline-sub">Kurtkoy Real Estate Agency</p>
+                        <p>I provide end-to-end real estate consultancy services, including portfolio management, client
+                            communication, property marketing, market analysis, and negotiation processes for sales and
+                            rental transactions.</p>
+                        <div class="timeline-tags">
+                            <span>Real Estate Sales</span>
+                            <span>Leasing</span>
+                            <span>Portfolio Management</span>
+                            <span>Property Marketing</span>
+                            <span>Market Research</span>
+                            <span>Negotiation</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- <section id="education">
+            <h1 class="section-title">Education</h1>
+            <div class="education">
+                <div class="education-content">
+                    <div class="education-card">
+                        <h1>Istanbul Okan University</h1>
+                        <h2>English Preparatory Class</h2>
+                        <h3>2023-2024</h3>
+                        <p></p>
+                    </div>
+                    <div class="education-card">
+                        <h1>Istanbul Okan University</h1>
+                        <h2>Bachelor of Engineering,Computer Engineering</h2>
+                        <h3>2024-2028</h3>
+                        <p>Studying core subjects in software, programming, algorithms, and computer systems while
+                            building practical projects in web development and digital product creation.</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <section id="contact">
+            <h1 class="section-title">Contact</h1>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Name" class="contact-input" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="surname">Surname</label>
+                        <input id="surname" name="surname" type="text" placeholder="Surname" class="contact-input"
+                            required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="example@website.com"
+                            class="contact-input" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" cols="80" rows="6" placeholder="Type your message"
+                            class="contact-input" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <input type="submit" value="Send" class="blue-btn-soft">
+                        <input type="reset" value="Clear" class="blue-btn-neon">
+                    </div>
+                </form>
+                <div class="contact-right">
+                    <h1>Contact Information</h1>
+                    <h3>To get in touch with me directly:</h3>
+                    <p><i class="ri-mail-fill"></i> mahmutcanerarslan@gmail.com</p>
+                    <p><i class="ri-phone-fill"></i> +90 538 562 49 28</p>
+
+                    <div class="contact-right-btns">
+                        <button class="blue-btn-soft"><i class="ri-github-fill"></i> Github</button>
+                        <button class="blue-btn-outline"><i class="ri-linkedin-box-fill"></i> Linkedin</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     <footer>
-      <p>© 2026 Mahmut Caner Arslan | Bilgisayar Mühendisliği Öğrencisi</p>
+
+        <div id="social-media">
+            <a href="#" class="social-link"><i class="ri-github-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-google-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-youtube-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+            <a href="#" class="social-link"><i class="ri-snapchat-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-whatsapp-line"></i></a>
+        </div>
+        <div id="footer-text">
+            <p>© 2026 Mahmut Caner Arslan. All rights reserved.</p>
+        </div>
+
     </footer>
-  </body>
+
+
+</body>
+
 </html>

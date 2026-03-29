@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+# NPM dependencies
+node_modules/
+# Logs
+npm-debug.log*
+yarn-debug.log*
+# Build outputs
+dist/
+build/
+coverage/
+# IDE/editor directories
+.vscode/
+.idea/
+# Environment files
+*.env
