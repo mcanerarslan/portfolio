@@ -2,24 +2,32 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
     <link rel="stylesheet" href="style.css">
     <title>My Portfolio WebPage</title>
 
+
+
 </head>
 
 <body>
     <header>
-        <h1>M. Caner Arslan</h1>
+        <a href="#pages">
+            <h1>M. Caner Arslan</h1>
+        </a>
+
         <nav>
             <a href="#pages">Home</a>
             <a href="#about">About</a>
-            <a href="#project">Project</a>
             <a href="#skill">Skill</a>
+            <a href="#project">Projects</a>
+            <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -28,10 +36,14 @@
             <div class="hero-content">
                 <div class="hero-left">
                     <h3 style="font-weight: normal;">Hi, I'm M. Caner Arslan 👋 </h3>
-                    <h1 class="section-title" style="margin-top: -15px;">SOFTWARE DEVELOPER</h1>
+                    <h1 class="section-title" style="margin-top: -15px;">Aspiring Software Developer</h1>
 
-                    <div class="hero-buttons"> <button class="blue-btn-soft"><i class="ri-arrow-right-line"></i> Contact Me</button>
-                        <button class="blue-btn-outline"><i class="ri-download-line"></i> Download CV</button>
+                    <div class="hero-buttons"> <button class="blue-btn-soft"
+                            onclick="window.location.href='#contact'"><i class="ri-arrow-right-line"></i> Contact
+                            Me</button>
+
+                        <button class="blue-btn-outline" onclick="window.open('assets/cv-mca.pdf', '_blank')"><i
+                                class="ri-download-line"></i> Download CV</button>
                     </div>
                 </div>
                 <div class="hero-right">
@@ -43,18 +55,15 @@
         <section id="about">
             <h1 class="section-title">About Me</h1>
             <div id="about-photo"></div>
-            <p style="text-indent: 25px; padding: 0 100px; letter-spacing: 0.4px; word-spacing: 3px;">Hello, I’m Mahmut
-                Caner Arslan. I study Computer Engineering and I am
-                passionate about web development, user interface design, and real-world digital products. I enjoy
-                transforming ideas into clean, functional,
-                and visually strong websites.
-                <br>
-                My background combines technology and entrepreneurship. While improving myself in software development,
-                I also work on digital projects in the real estate industry. This gives me a practical perspective on
-                building systems that are not only visually appealing but also useful, fast, and business-oriented.
-                <br>
-                I am especially interested in frontend development, responsive design, modern JavaScript frameworks, and
-                creating professional web experiences that strengthen brands online.
+            <p style="text-indent: 25px; padding: 0 200px; font-size: 16px;">
+                I am a Computer Engineering student at Istanbul Okan University. I completed
+                the English Preparatory Program during the 2023–2024 academic year. I am
+                currently strengthening my software development fundamentals by working
+                with <b>Python</b>, <b>C</b>, <b>C#</b>, and <b>Java</b>. My goal is to evolve into a Full Stack
+                Developer,
+                and I have a deep interest in software development, problem-solving, and
+                emerging technologies. I am eager to enhance my technical skills and
+                teamwork competencies through internships and hands-on projects.
             </p>
 
         </section>
@@ -62,11 +71,15 @@
             <h1 class="section-title">Skills</h1>
             <div class="skill">
                 <div class="skill-tags">
-                    <span>Java</span>
                     <span>C</span>
+                    <span>Java</span>
                     <span>Python</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
+                    <span>C#</span>
+                    <span>ASP.NET Core(Learning)</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>SQL</span>
                     <span>Git</span>
                     <span>GitHub</span>
                 </div>
@@ -74,50 +87,73 @@
         </section>
         <section id="project">
             <h1 class="section-title">Projects</h1>
+            <p class="section-paragraph">Some current projects I'm working on.</p>
             <div class="project-container">
                 <div class="project-card">
-                    <div class="project-card-title">Real Estate Website Platform</div>
+                    <div class="project-card-title">Tic-Tac-Toe Java Swing</div>
                     <div class="project-card-description">
-                        Subtitle:
-                        Modern Real Estate Web Platform
+                        OOP & GUI Development<br>
 
-                        Description:
-                        A real estate-focused website project designed to present property listings in a modern,
-                        professional,
-                        and
-                        SEO-friendly structure. The platform aims to improve listing visibility, user experience, and
-                        brand
-                        trust
-                        through clean design, multilingual presentation, and practical content management.
-
-                        Technologies:
-                        React.js, Next.js, Tailwind CSS, Supabase</div>
+                        A modern desktop implementation of the classic Tic-Tac-Toe game built with Java. This project
+                        emphasizes robust game logic and responsive UI design. Key features include real-time
+                        win-condition algorithms, interactive grid buttons, and a polished aesthetic that moves beyond
+                        the standard Java look-and-feel.
+                    </div>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>Swing</span>
+                        <span>OOP</span>
+                    </div>
                     <div class="project-card-buttons">
-                        <div class="blue-btn-soft">More Details</div>
-                        <div class="blue-btn-soft">Demo</div>
-                        <div class="blue-btn-soft">Github</div>
+                        <div class="project-github-link" onclick="location.href='https://github.com/mcanerarslan/tick-tack-toe-java-swing'"><i
+                                class="ri-github-fill"></i></div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-card-title">Portfolio & Business Web Interfaces</div>
+                    <div class="project-card-title">Fishing Simulator (Java Swing)</div>
                     <div class="project-card-description">
-                        <p>Responsive Web Interface Development
-                            <br>
-                            A collection of responsive interface projects built to improve my frontend development
-                            skills.
-                            These projects focus on layout systems, reusable components, modern styling, and
-                            mobile-friendly structures.
-                            <br>
-                            Technologies:
-                            HTML, CSS, JavaScript, Tailwind CSS
-                        </p>
+                        Desktop-based Simulation & Economy Engine<br>
+
+                        An interactive desktop application that simulates a fishing ecosystem. Built with Java Swing, it
+                        includes a fully functional store for equipment, player statistics tracking, and persistent data
+                        storage. This project showcases the ability to transform complex back-end logic into a
+                        user-friendly graphical interface.
+                    </div>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>Swing</span>
+                        <span>File I/O</span>
+                        <span>OOP</span>
+                        <span>Game Economy</span>
                     </div>
                     <div class="project-card-buttons">
-                        <div class="blue-btn-soft" onclick="location.href='https://ornek.com'">More Details</div>
-                        <div class="blue-btn-soft" onclick="location.href='https://github.com'">Demo</div>
-                        <div class="blue-btn-soft" onclick="location.href='https://ornek.com'">Github</div>
+                        <div class="project-github-link" onclick="location.href='https://github.com/mcanerarslan/balik-tutma-oyunu'"><i
+                                class="ri-github-fill"></i></div>
                     </div>
                 </div>
+                <div class="project-card">
+                    <div class="project-card-title">Python Vocabulary Trainer</div>
+                    <div class="project-card-description">
+                        Python-Based Educational Automation<br>
+
+                        A lightweight Python application for efficient memorization. Features dynamic question sampling,
+                        real-time validation, and session summaries. Showcases clean scripting, modular loops, and
+                        stylized terminal UX for a focused learning experience.
+                    </div>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Automation</span>
+                        <span>Data Structures</span>
+                    </div>
+                    <div class="project-card-buttons">
+                        <div class="project-github-link" onclick="location.href='https://github.com/mcanerarslan/kelime-ezberle'"><i
+                                class="ri-github-fill"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="blue-btn-soft" onclick="window.location.href='/projects.html'">See all
+                    projects</button>
             </div>
 
         </section>
@@ -128,37 +164,59 @@
                 <article class="timeline-entry">
                     <span class="experience-icon">🎓</span>
                     <div class="timeline-card">
-                        <p class="timeline-date">2023 - 2024</p>
-                        <h3>English Preparatory Class</h3>
+                        <p class="timeline-date">Oct 2024 - Jun 2028</p>
+                        <h3>Computer Engineering</h3>
                         <p class="timeline-sub">Istanbul Okan University</p>
-                        <p>Completed an intensive English preparatory program focused on academic reading, writing,
-                            listening, and speaking skills. This process strengthened my communication abilities and
-                            helped me build a solid foundation for continuing my Computer Engineering education in
-                            English.</p>
+                        <ul>
+                            <li>Focused on mastering software development fundamentals and core
+                                computer engineering principles.</li>
+                            <li>Improving skills in programming, algorithms, and problem-solving.</li>
+                            <li>Focusing on supporting theoretical knowledge with practical projects.</li>
+                            <li>Strengthening technical skills by developing small and medium-scale
+                                projects.</li>
+                        </ul>
                     </div>
                 </article>
                 <article class="timeline-entry">
                     <span class="experience-icon">🎓</span>
                     <div class="timeline-card">
-                        <p class="timeline-date">2024 - Ongoing</p>
-                        <h3>Computer Engineering</h3>
+                        <p class="timeline-date">Oct 2023 - Jun 2024</p>
+                        <h3>English Preparatory Class</h3>
                         <p class="timeline-sub">Istanbul Okan University</p>
-                        <p>Bachelor's degree program focused on software engineering fundamentals, algorithms, and web
-                            interfaces.</p>
+                        <ul>
+                            <li>Successfully completed the English Preparatory Program.</li>
+                            <li>Developed academic reading, writing, and communication skills in English.</li>
+                        </ul>
                     </div>
                 </article>
+                <article class="timeline-entry">
+                    <span class="experience-icon">🎓</span>
+                    <div class="timeline-card">
+                        <p class="timeline-date">Sept 2018 - Jun 2022</p>
+                        <h3>High School</h3>
+                        <p class="timeline-sub">Kurtköy Anatolian High School</p>
+                        <ul>
+                            <li>Established a strong engineering foundation through a science-oriented curriculum.</li>
+                            <li>Developed analytical thinking and problem-solving skills.</li>
+                            <li>Gained a goal-oriented and disciplined approach to work.</li>
+                        </ul>
+                    </div>
+                </article>
+
 
                 <div class="timeline-group-label">Community</div>
                 <article class="timeline-entry">
                     <span class="experience-icon">💼</span>
                     <div class="timeline-card">
-                        <p class="timeline-date">01.07.2025 - 01.01.2026</p>
+                        <p class="timeline-date">July 2025 - Feb 2026</p>
                         <h3>Social Media Team Lead</h3>
                         <p class="timeline-sub">Huawei Student Developers - Okan University (HSDOKAN)</p>
                         <ul>
                             <li>Led the HSDOKAN club's social media operations.</li>
-                            <li>Directed a 6–7 person social media team, managing coordination and task distribution.</li>
-                            <li>Planned content and publishing calendars to keep the accounts consistent and strategic.</li>
+                            <li>Directed a 6–7 person social media team, managing coordination and task distribution.
+                            </li>
+                            <li>Planned content and publishing calendars to keep the accounts consistent and strategic.
+                            </li>
                             <li>Handled the club's event and activity communications on social platforms.</li>
                             <li>Implemented initiatives to increase the club's digital visibility and engagement.</li>
                         </ul>
@@ -170,18 +228,16 @@
                             <span>Communication</span>
                             <span>Engagement</span>
                         </div>
-                        <p class="timeline-date">01.12.2025 - 28.02.2026</p>
+                        <p class="timeline-date">Dec 2025 - Feb 2026</p>
                         <h3>Project Development Officer</h3>
                         <p class="timeline-sub">Huawei Student Developers - Okan University (HSDOKAN)</p>
-                        <p>I actively participate in developing web platforms for machinery digitization, reporting, and
-                            remote management by delivering reusable UI modules.</p>
+                        <ul>
+                            <li>Contributing to the development phase of "CampusHub.com.tr," a university student
+                                platform project.</li>
+                        </ul>
                         <div class="timeline-tags">
                             <span>Project Development</span>
                             <span>Team Collaboration</span>
-                            <span>Event Planning</span>
-                            <span>Organization</span>
-                            <span>Process Management</span>
-                            <span>Strategic Planning</span>
                             <span>Problem Solving</span>
                         </div>
                     </div>
@@ -193,9 +249,11 @@
                         <p class="timeline-date">01.01.2026 - Present</p>
                         <h3>Real Estate Consultant</h3>
                         <p class="timeline-sub">Kurtkoy Real Estate Agency</p>
-                        <p>I provide end-to-end real estate consultancy services, including portfolio management, client
-                            communication, property marketing, market analysis, and negotiation processes for sales and
-                            rental transactions.</p>
+                        <ul>
+                            <li>I provide end-to-end real estate consultancy services, including portfolio management,
+                                client communication, property marketing, market analysis, and negotiation processes for
+                                sales and rental transactions.</li>
+                        </ul>
                         <div class="timeline-tags">
                             <span>Real Estate Sales</span>
                             <span>Leasing</span>
@@ -208,48 +266,29 @@
                 </article>
             </div>
         </section>
-        <!-- <section id="education">
-            <h1 class="section-title">Education</h1>
-            <div class="education">
-                <div class="education-content">
-                    <div class="education-card">
-                        <h1>Istanbul Okan University</h1>
-                        <h2>English Preparatory Class</h2>
-                        <h3>2023-2024</h3>
-                        <p></p>
-                    </div>
-                    <div class="education-card">
-                        <h1>Istanbul Okan University</h1>
-                        <h2>Bachelor of Engineering,Computer Engineering</h2>
-                        <h3>2024-2028</h3>
-                        <p>Studying core subjects in software, programming, algorithms, and computer systems while
-                            building practical projects in web development and digital product creation.</p>
-                    </div>
-                </div>
-            </div>
-        </section> -->
+
         <section id="contact">
             <h1 class="section-title">Contact</h1>
             <div class="contact-content">
                 <form class="contact-form">
                     <div class="form-row">
-                        <label for="name">Name</label>
+                        <!-- <label for="name">Name</label> -->
                         <input id="name" name="name" type="text" placeholder="Name" class="contact-input" required>
                     </div>
                     <div class="form-row">
-                        <label for="surname">Surname</label>
+                        <!-- <label for="surname">Surname</label> -->
                         <input id="surname" name="surname" type="text" placeholder="Surname" class="contact-input"
                             required>
                     </div>
                     <div class="form-row">
-                        <label for="email">Email</label>
+                        <!-- <label for="email">Email</label> -->
                         <input id="email" name="email" type="email" placeholder="example@website.com"
                             class="contact-input" required>
                     </div>
                     <div class="form-row">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" cols="80" rows="6" placeholder="Type your message"
-                            class="contact-input" required></textarea>
+                        <!-- <label for="message">Message</label> -->
+                        <textarea id="message" name="message" placeholder="Type your message" class="contact-input"
+                            required></textarea>
                     </div>
                     <div class="form-actions">
                         <input type="submit" value="Send" class="blue-btn-soft">
@@ -263,8 +302,12 @@
                     <p><i class="ri-phone-fill"></i> +90 538 562 49 28</p>
 
                     <div class="contact-right-btns">
-                        <button class="blue-btn-soft"><i class="ri-github-fill"></i> Github</button>
-                        <button class="blue-btn-outline"><i class="ri-linkedin-box-fill"></i> Linkedin</button>
+                        <button class="blue-btn-soft"
+                            onclick="window.open('https://github.com/mcanerarslan', '_blank')"><i
+                                class="ri-github-fill"></i> Github</button>
+                        <button class="blue-btn-outline"
+                            onclick="window.open('https://linkedin.com/in/mcanerarslan', '_blank')"><i
+                                class="ri-linkedin-box-fill"></i> Linkedin</button>
                     </div>
                 </div>
             </div>
@@ -273,13 +316,16 @@
     <footer>
 
         <div id="social-media">
-            <a href="#" class="social-link"><i class="ri-github-fill"></i></a>
-            <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
-            <a href="#" class="social-link"><i class="ri-google-fill"></i></a>
-            <a href="#" class="social-link"><i class="ri-youtube-fill"></i></a>
+            <a href="#" class="social-link" onclick="window.open('https://github.com/mcanerarslan', '_blank')"><i
+                    class="ri-github-fill"></i></a>
+            <a href="#" class="social-link" onclick="window.open('https://linkedin.com/in/mcanerarslan', '_blank')"><i
+                    class="ri-linkedin-fill"></i></a>
+            <a href="#" class="social-link" onclick="window.open('mailto:mahmutcanerarslan@gmail.com')"><i
+                    class="ri-google-fill"></i></a>
+            <!-- <a href="#" class="social-link"><i class="ri-youtube-fill"></i></a>
             <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
             <a href="#" class="social-link"><i class="ri-snapchat-fill"></i></a>
-            <a href="#" class="social-link"><i class="ri-whatsapp-line"></i></a>
+            <a href="#" class="social-link"><i class="ri-whatsapp-line"></i></a> -->
         </div>
         <div id="footer-text">
             <p>© 2026 Mahmut Caner Arslan. All rights reserved.</p>
