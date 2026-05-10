@@ -4,16 +4,25 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="description" content="Portfolio of M. Caner Arslan, an aspiring software developer specializing in Python, Java, C#, and web technologies.">
+    <meta name="keywords" content="portfolio, software developer, Python, Java, C#, web development, M. Caner Arslan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/favicon.ico">
+    <script>
+        (function () {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+                document.documentElement.dataset.theme = savedTheme || (prefersLight ? 'light' : 'dark');
+            } catch (error) {
+                document.documentElement.dataset.theme = 'dark';
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
     <link rel="stylesheet" href="style.css">
     <title>My Portfolio WebPage</title>
-
-
-
+    <script src="site.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +31,13 @@
             <h1>M. Caner Arslan</h1>
         </a>
 
-        <nav>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav-menu">
             <a href="#pages">Home</a>
             <a href="#about">About</a>
             <a href="#skill">Skill</a>
@@ -30,13 +45,17 @@
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
         </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true"><i class="ri-moon-line"></i></span>
+            <span class="theme-toggle__label">Night</span>
+        </button>
     </header>
     <div id="pages">
         <section class="hero">
             <div class="hero-content">
                 <div class="hero-left">
-                    <h3 style="font-weight: normal;">Hi, I'm M. Caner Arslan 👋 </h3>
-                    <h1 class="section-title" style="margin-top: -15px;">Aspiring Software Developer</h1>
+                    <h3>Hi, I'm M. Caner Arslan 👋 </h3>
+                    <h1 class="section-title">Aspiring Software Developer</h1>
 
                     <div class="hero-buttons"> <button class="blue-btn-soft"
                             onclick="window.location.href='#contact'"><i class="ri-arrow-right-line"></i> Contact
@@ -47,15 +66,15 @@
                     </div>
                 </div>
                 <div class="hero-right">
-                    <div id="about-photo" class="img"></div>
+                    <div class="profile-photo profile-photo--hero"></div>
                 </div>
 
             </div>
         </section>
         <section id="about">
             <h1 class="section-title">About Me</h1>
-            <div id="about-photo"></div>
-            <p style="text-indent: 25px; padding: 0 200px; font-size: 16px;">
+            <div class="profile-photo profile-photo--about"></div>
+            <p>
                 I am a Computer Engineering student at Istanbul Okan University. I completed
                 the English Preparatory Program during the 2023–2024 academic year. I am
                 currently strengthening my software development fundamentals by working
@@ -332,8 +351,5 @@
         </div>
 
     </footer>
-
-
 </body>
-
 </html>

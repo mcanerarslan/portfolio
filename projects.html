@@ -6,10 +6,21 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="icon" href="assets/favicon.ico">
+    <script>
+        (function () {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+                document.documentElement.dataset.theme = savedTheme || (prefersLight ? 'light' : 'dark');
+            } catch (error) {
+                document.documentElement.dataset.theme = 'dark';
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
     <link rel="stylesheet" href="style.css">
     <title>PROJECTS</title>
-
+    <script src="site.js" defer></script>
 </head>
 
 <body>
@@ -17,6 +28,11 @@
         <a href="index.html">
             <h1>M. Caner Arslan</h1>
         </a>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
             <a href="index.html#pages">Home</a>
             <a href="index.html#about">About</a>
@@ -25,6 +41,10 @@
             <a href="index.html#experience">Experience</a>
             <a href="index.html#contact">Contact</a>
         </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true"><i class="ri-moon-line"></i></span>
+            <span class="theme-toggle__label">Night</span>
+        </button>
     </header>
     <div id="pages">
 
