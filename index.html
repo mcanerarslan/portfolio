@@ -21,7 +21,7 @@
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
     <link rel="stylesheet" href="style.css">
-    <title>My Portfolio WebPage</title>
+    <title data-i18n="page_title_home">My Portfolio WebPage</title>
     <script src="site.js" defer></script>
 </head>
 
@@ -31,38 +31,46 @@
             <h1>M. Caner Arslan</h1>
         </a>
 
-        <button class="hamburger" aria-label="Toggle navigation">
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
         <nav id="nav-menu">
-            <a href="#pages">Home</a>
-            <a href="#about">About</a>
-            <a href="#skill">Skill</a>
-            <a href="#project">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
+            <a href="#pages" data-i18n="nav_home">Home</a>
+            <a href="#about" data-i18n="nav_about">About</a>
+            <a href="#skill" data-i18n="nav_skill">Skill</a>
+            <a href="#project" data-i18n="nav_projects">Projects</a>
+            <a href="#experience" data-i18n="nav_experience">Experience</a>
+            <a href="#contact" data-i18n="nav_contact">Contact</a>
         </nav>
-        <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
-            <span class="theme-toggle__icon" aria-hidden="true"><i class="ri-moon-line"></i></span>
-            <span class="theme-toggle__label">Night</span>
-        </button>
+        <div class="header-actions">
+            <div class="lang-toggle" role="group" aria-label="Language switcher">
+                <button type="button" data-lang-option="tr">TR</button>
+                <span class="lang-separator" aria-hidden="true">/</span>
+                <button type="button" data-lang-option="en">EN</button>
+            </div>
+            <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+                <span class="theme-toggle__icon" aria-hidden="true"><i class="ri-moon-line"></i></span>
+                <span class="theme-toggle__label">Night</span>
+            </button>
+        </div>
     </header>
     <div id="pages">
         <section class="hero">
             <div class="hero-content">
                 <div class="hero-left">
-                    <h3>Hi, I'm M. Caner Arslan 👋 </h3>
-                    <h1 class="section-title">Aspiring Software Developer</h1>
+                    <h3 data-i18n="hero_greeting">Hi, I'm M. Caner Arslan 👋</h3>
+                    <h1 class="section-title" data-rotating-title aria-live="polite" aria-atomic="true">
+                        <span data-i18n="hero_title">Aspiring Software Developer</span>
+                    </h1>
 
                     <div class="hero-buttons"> <button class="blue-btn-soft"
-                            onclick="window.location.href='#contact'"><i class="ri-arrow-right-line"></i> Contact
-                            Me</button>
+                            onclick="window.location.href='#contact'"><i class="ri-arrow-right-line"></i> <span data-i18n="hero_contact">Contact Me</span></button>
 
                         <button class="blue-btn-outline" onclick="window.open('assets/cv-mca.pdf', '_blank')"><i
-                                class="ri-download-line"></i> Download CV</button>
+                                class="ri-download-line"></i> <span data-i18n="hero_download">Download CV</span></button>
                     </div>
                 </div>
                 <div class="hero-right">
@@ -72,22 +80,21 @@
             </div>
         </section>
         <section id="about">
-            <h1 class="section-title">About Me</h1>
+            <h1 class="section-title" data-i18n="about_title">About Me</h1>
             <div class="profile-photo profile-photo--about"></div>
-            <p>
+            <p data-i18n="about_text">
                 I am a Computer Engineering student at Istanbul Okan University. I completed
-                the English Preparatory Program during the 2023–2024 academic year. I am
+                the English Preparatory Program during the 2023-2024 academic year. I am
                 currently strengthening my software development fundamentals by working
-                with <b>Python</b>, <b>C</b>, <b>C#</b>, and <b>Java</b>. My goal is to evolve into a Full Stack
-                Developer,
-                and I have a deep interest in software development, problem-solving, and
-                emerging technologies. I am eager to enhance my technical skills and
+                with Python, C, C#, and Java. My goal is to evolve into a Full Stack
+                Developer, and I have a deep interest in software development, problem-solving,
+                and emerging technologies. I am eager to enhance my technical skills and
                 teamwork competencies through internships and hands-on projects.
             </p>
 
         </section>
         <section id="skill">
-            <h1 class="section-title">Skills</h1>
+            <h1 class="section-title" data-i18n="skills_title">Skills</h1>
             <div class="skill">
                 <div class="skill-tags">
                     <span>C</span>
@@ -105,23 +112,19 @@
             </div>
         </section>
         <section id="project">
-            <h1 class="section-title">Projects</h1>
-            <p class="section-paragraph">Some current projects I'm working on.</p>
+            <h1 class="section-title" data-i18n="projects_title">Projects</h1>
+            <p class="section-paragraph" data-i18n="projects_subtitle">Some current projects I'm working on.</p>
             <div class="project-container">
                 <div class="project-card">
-                    <div class="project-card-title">Tic-Tac-Toe Java Swing</div>
+                    <div class="project-card-title" data-i18n="project_1_title">Tic-Tac-Toe Java Swing</div>
                     <div class="project-card-description">
-                        OOP & GUI Development<br>
-
-                        A modern desktop implementation of the classic Tic-Tac-Toe game built with Java. This project
-                        emphasizes robust game logic and responsive UI design. Key features include real-time
-                        win-condition algorithms, interactive grid buttons, and a polished aesthetic that moves beyond
-                        the standard Java look-and-feel.
+                        <p data-i18n="project_1_kicker">OOP & GUI Development</p>
+                        <p data-i18n="project_1_desc">A modern desktop implementation of the classic Tic-Tac-Toe game built with Java. This project emphasizes robust game logic and responsive UI design. Key features include real-time win-condition algorithms, interactive grid buttons, and a polished aesthetic that moves beyond the standard Java look-and-feel.</p>
                     </div>
                     <div class="project-tags">
-                        <span>Java</span>
-                        <span>Swing</span>
-                        <span>OOP</span>
+                        <span data-i18n="project_1_tag_1">Java</span>
+                        <span data-i18n="project_1_tag_2">Swing</span>
+                        <span data-i18n="project_1_tag_3">OOP</span>
                     </div>
                     <div class="project-card-buttons">
                         <div class="project-github-link" onclick="location.href='https://github.com/mcanerarslan/tick-tack-toe-java-swing'"><i
@@ -129,21 +132,17 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-card-title">Fishing Simulator (Java Swing)</div>
+                    <div class="project-card-title" data-i18n="project_2_title">Fishing Simulator (Java Swing)</div>
                     <div class="project-card-description">
-                        Desktop-based Simulation & Economy Engine<br>
-
-                        An interactive desktop application that simulates a fishing ecosystem. Built with Java Swing, it
-                        includes a fully functional store for equipment, player statistics tracking, and persistent data
-                        storage. This project showcases the ability to transform complex back-end logic into a
-                        user-friendly graphical interface.
+                        <p data-i18n="project_2_kicker">Desktop-based Simulation & Economy Engine</p>
+                        <p data-i18n="project_2_desc">An interactive desktop application that simulates a fishing ecosystem. Built with Java Swing, it includes a fully functional store for equipment, player statistics tracking, and persistent data storage. This project showcases the ability to transform complex back-end logic into a user-friendly graphical interface.</p>
                     </div>
                     <div class="project-tags">
-                        <span>Java</span>
-                        <span>Swing</span>
-                        <span>File I/O</span>
-                        <span>OOP</span>
-                        <span>Game Economy</span>
+                        <span data-i18n="project_2_tag_1">Java</span>
+                        <span data-i18n="project_2_tag_2">Swing</span>
+                        <span data-i18n="project_2_tag_3">File I/O</span>
+                        <span data-i18n="project_2_tag_4">OOP</span>
+                        <span data-i18n="project_2_tag_5">Game Economy</span>
                     </div>
                     <div class="project-card-buttons">
                         <div class="project-github-link" onclick="location.href='https://github.com/mcanerarslan/balik-tutma-oyunu'"><i
@@ -151,18 +150,15 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-card-title">Python Vocabulary Trainer</div>
+                    <div class="project-card-title" data-i18n="project_3_title">Python Vocabulary Trainer</div>
                     <div class="project-card-description">
-                        Python-Based Educational Automation<br>
-
-                        A lightweight Python application for efficient memorization. Features dynamic question sampling,
-                        real-time validation, and session summaries. Showcases clean scripting, modular loops, and
-                        stylized terminal UX for a focused learning experience.
+                        <p data-i18n="project_3_kicker">Python-Based Educational Automation</p>
+                        <p data-i18n="project_3_desc">A lightweight Python application for efficient memorization. Features dynamic question sampling, real-time validation, and session summaries. Showcases clean scripting, modular loops, and stylized terminal UX for a focused learning experience.</p>
                     </div>
                     <div class="project-tags">
-                        <span>Python</span>
-                        <span>Automation</span>
-                        <span>Data Structures</span>
+                        <span data-i18n="project_3_tag_1">Python</span>
+                        <span data-i18n="project_3_tag_2">Automation</span>
+                        <span data-i18n="project_3_tag_3">Data Structures</span>
                     </div>
                     <div class="project-card-buttons">
                         <div class="project-github-link" onclick="location.href='https://github.com/mcanerarslan/kelime-ezberle'"><i
@@ -171,115 +167,107 @@
                 </div>
             </div>
             <div>
-                <button class="blue-btn-soft" onclick="window.location.href='/projects.html'">See all
-                    projects</button>
+                <button class="blue-btn-soft" onclick="window.location.href='/projects.html'"><span data-i18n="projects_view_all">See all projects</span></button>
             </div>
 
         </section>
         <section id="experience">
-            <h1 class="section-title">Experience</h1>
+            <h1 class="section-title" data-i18n="experience_title">Experience</h1>
             <div class="experience-timeline">
-                <div class="timeline-group-label">Education</div>
+                <div class="timeline-group-label" data-i18n="experience_education">Education</div>
                 <article class="timeline-entry">
                     <span class="experience-icon">🎓</span>
                     <div class="timeline-card">
-                        <p class="timeline-date">Oct 2024 - Jun 2028</p>
-                        <h3>Computer Engineering</h3>
-                        <p class="timeline-sub">Istanbul Okan University</p>
+                        <p class="timeline-date" data-i18n="experience_edu_1_date">Oct 2024 - Jun 2028</p>
+                        <h3 data-i18n="experience_edu_1_title">Computer Engineering</h3>
+                        <p class="timeline-sub" data-i18n="experience_edu_1_sub">Istanbul Okan University</p>
                         <ul>
-                            <li>Focused on mastering software development fundamentals and core
-                                computer engineering principles.</li>
-                            <li>Improving skills in programming, algorithms, and problem-solving.</li>
-                            <li>Focusing on supporting theoretical knowledge with practical projects.</li>
-                            <li>Strengthening technical skills by developing small and medium-scale
-                                projects.</li>
+                            <li data-i18n="experience_edu_1_bullet_1">Focused on mastering software development fundamentals and core computer engineering principles.</li>
+                            <li data-i18n="experience_edu_1_bullet_2">Improving skills in programming, algorithms, and problem-solving.</li>
+                            <li data-i18n="experience_edu_1_bullet_3">Focusing on supporting theoretical knowledge with practical projects.</li>
+                            <li data-i18n="experience_edu_1_bullet_4">Strengthening technical skills by developing small and medium-scale projects.</li>
                         </ul>
                     </div>
                 </article>
                 <article class="timeline-entry">
                     <span class="experience-icon">🎓</span>
                     <div class="timeline-card">
-                        <p class="timeline-date">Oct 2023 - Jun 2024</p>
-                        <h3>English Preparatory Class</h3>
-                        <p class="timeline-sub">Istanbul Okan University</p>
+                        <p class="timeline-date" data-i18n="experience_edu_2_date">Oct 2023 - Jun 2024</p>
+                        <h3 data-i18n="experience_edu_2_title">English Preparatory Class</h3>
+                        <p class="timeline-sub" data-i18n="experience_edu_2_sub">Istanbul Okan University</p>
                         <ul>
-                            <li>Successfully completed the English Preparatory Program.</li>
-                            <li>Developed academic reading, writing, and communication skills in English.</li>
+                            <li data-i18n="experience_edu_2_bullet_1">Successfully completed the English Preparatory Program.</li>
+                            <li data-i18n="experience_edu_2_bullet_2">Developed academic reading, writing, and communication skills in English.</li>
                         </ul>
                     </div>
                 </article>
                 <article class="timeline-entry">
                     <span class="experience-icon">🎓</span>
                     <div class="timeline-card">
-                        <p class="timeline-date">Sept 2018 - Jun 2022</p>
-                        <h3>High School</h3>
-                        <p class="timeline-sub">Kurtköy Anatolian High School</p>
+                        <p class="timeline-date" data-i18n="experience_edu_3_date">Sept 2018 - Jun 2022</p>
+                        <h3 data-i18n="experience_edu_3_title">High School</h3>
+                        <p class="timeline-sub" data-i18n="experience_edu_3_sub">Kurtköy Anatolian High School</p>
                         <ul>
-                            <li>Established a strong engineering foundation through a science-oriented curriculum.</li>
-                            <li>Developed analytical thinking and problem-solving skills.</li>
-                            <li>Gained a goal-oriented and disciplined approach to work.</li>
+                            <li data-i18n="experience_edu_3_bullet_1">Established a strong engineering foundation through a science-oriented curriculum.</li>
+                            <li data-i18n="experience_edu_3_bullet_2">Developed analytical thinking and problem-solving skills.</li>
+                            <li data-i18n="experience_edu_3_bullet_3">Gained a goal-oriented and disciplined approach to work.</li>
                         </ul>
                     </div>
                 </article>
 
 
-                <div class="timeline-group-label">Community</div>
+                <div class="timeline-group-label" data-i18n="experience_community">Community</div>
                 <article class="timeline-entry">
                     <span class="experience-icon">💼</span>
                     <div class="timeline-card">
-                        <p class="timeline-date">July 2025 - Feb 2026</p>
-                        <h3>Social Media Team Lead</h3>
-                        <p class="timeline-sub">Huawei Student Developers - Okan University (HSDOKAN)</p>
+                        <p class="timeline-date" data-i18n="experience_comm_1_date">July 2025 - Feb 2026</p>
+                        <h3 data-i18n="experience_comm_1_title">Social Media Team Lead</h3>
+                        <p class="timeline-sub" data-i18n="experience_comm_1_sub">Huawei Student Developers - Okan University (HSDOKAN)</p>
                         <ul>
-                            <li>Led the HSDOKAN club's social media operations.</li>
-                            <li>Directed a 6–7 person social media team, managing coordination and task distribution.
-                            </li>
-                            <li>Planned content and publishing calendars to keep the accounts consistent and strategic.
-                            </li>
-                            <li>Handled the club's event and activity communications on social platforms.</li>
-                            <li>Implemented initiatives to increase the club's digital visibility and engagement.</li>
+                            <li data-i18n="experience_comm_1_bullet_1">Led the HSDOKAN club's social media operations.</li>
+                            <li data-i18n="experience_comm_1_bullet_2">Directed a 6–7 person social media team, managing coordination and task distribution.</li>
+                            <li data-i18n="experience_comm_1_bullet_3">Planned content and publishing calendars to keep the accounts consistent and strategic.</li>
+                            <li data-i18n="experience_comm_1_bullet_4">Handled the club's event and activity communications on social platforms.</li>
+                            <li data-i18n="experience_comm_1_bullet_5">Implemented initiatives to increase the club's digital visibility and engagement.</li>
                         </ul>
                         <div class="timeline-tags">
-                            <span>Social Media</span>
-                            <span>Team Leadership</span>
-                            <span>Content Planning</span>
-                            <span>Coordination</span>
-                            <span>Communication</span>
-                            <span>Engagement</span>
+                            <span data-i18n="experience_comm_1_tag_1">Social Media</span>
+                            <span data-i18n="experience_comm_1_tag_2">Team Leadership</span>
+                            <span data-i18n="experience_comm_1_tag_3">Content Planning</span>
+                            <span data-i18n="experience_comm_1_tag_4">Coordination</span>
+                            <span data-i18n="experience_comm_1_tag_5">Communication</span>
+                            <span data-i18n="experience_comm_1_tag_6">Engagement</span>
                         </div>
-                        <p class="timeline-date">Dec 2025 - Feb 2026</p>
-                        <h3>Project Development Officer</h3>
-                        <p class="timeline-sub">Huawei Student Developers - Okan University (HSDOKAN)</p>
+                        <p class="timeline-date" data-i18n="experience_comm_2_date">Dec 2025 - Feb 2026</p>
+                        <h3 data-i18n="experience_comm_2_title">Project Development Officer</h3>
+                        <p class="timeline-sub" data-i18n="experience_comm_2_sub">Huawei Student Developers - Okan University (HSDOKAN)</p>
                         <ul>
-                            <li>Contributing to the development phase of "CampusHub.com.tr," a university student
-                                platform project.</li>
+                            <li data-i18n="experience_comm_2_bullet_1">Contributing to the development phase of "CampusHub.com.tr," a university student platform project.</li>
                         </ul>
                         <div class="timeline-tags">
-                            <span>Project Development</span>
-                            <span>Team Collaboration</span>
-                            <span>Problem Solving</span>
+                            <span data-i18n="experience_comm_2_tag_1">Project Development</span>
+                            <span data-i18n="experience_comm_2_tag_2">Team Collaboration</span>
+                            <span data-i18n="experience_comm_2_tag_3">Problem Solving</span>
                         </div>
                     </div>
                 </article>
-                <div class="timeline-group-label">Work Experience</div>
+                <div class="timeline-group-label" data-i18n="experience_work">Work Experience</div>
                 <article class="timeline-entry">
                     <span class="experience-icon">💼</span>
                     <div class="timeline-card">
-                        <p class="timeline-date">01.01.2026 - Present</p>
-                        <h3>Real Estate Consultant</h3>
-                        <p class="timeline-sub">Kurtkoy Real Estate Agency</p>
+                        <p class="timeline-date" data-i18n="experience_work_1_date">01.01.2026 - Present</p>
+                        <h3 data-i18n="experience_work_1_title">Real Estate Consultant</h3>
+                        <p class="timeline-sub" data-i18n="experience_work_1_sub">Kurtkoy Real Estate Agency</p>
                         <ul>
-                            <li>I provide end-to-end real estate consultancy services, including portfolio management,
-                                client communication, property marketing, market analysis, and negotiation processes for
-                                sales and rental transactions.</li>
+                            <li data-i18n="experience_work_1_bullet_1">I provide end-to-end real estate consultancy services, including portfolio management, client communication, property marketing, market analysis, and negotiation processes for sales and rental transactions.</li>
                         </ul>
                         <div class="timeline-tags">
-                            <span>Real Estate Sales</span>
-                            <span>Leasing</span>
-                            <span>Portfolio Management</span>
-                            <span>Property Marketing</span>
-                            <span>Market Research</span>
-                            <span>Negotiation</span>
+                            <span data-i18n="experience_work_1_tag_1">Real Estate Sales</span>
+                            <span data-i18n="experience_work_1_tag_2">Leasing</span>
+                            <span data-i18n="experience_work_1_tag_3">Portfolio Management</span>
+                            <span data-i18n="experience_work_1_tag_4">Property Marketing</span>
+                            <span data-i18n="experience_work_1_tag_5">Market Research</span>
+                            <span data-i18n="experience_work_1_tag_6">Negotiation</span>
                         </div>
                     </div>
                 </article>
@@ -287,46 +275,42 @@
         </section>
 
         <section id="contact">
-            <h1 class="section-title">Contact</h1>
+            <h1 class="section-title" data-i18n="contact_title">Contact</h1>
             <div class="contact-content">
                 <form class="contact-form">
                     <div class="form-row">
-                        <!-- <label for="name">Name</label> -->
-                        <input id="name" name="name" type="text" placeholder="Name" class="contact-input" required>
+                        <input id="name" name="name" type="text" placeholder="Name" data-i18n-placeholder="contact_name" class="contact-input" required>
                     </div>
                     <div class="form-row">
-                        <!-- <label for="surname">Surname</label> -->
-                        <input id="surname" name="surname" type="text" placeholder="Surname" class="contact-input"
+                        <input id="surname" name="surname" type="text" placeholder="Surname" data-i18n-placeholder="contact_surname" class="contact-input"
                             required>
                     </div>
                     <div class="form-row">
-                        <!-- <label for="email">Email</label> -->
-                        <input id="email" name="email" type="email" placeholder="example@website.com"
+                        <input id="email" name="email" type="email" placeholder="example@website.com" data-i18n-placeholder="contact_email"
                             class="contact-input" required>
                     </div>
                     <div class="form-row">
-                        <!-- <label for="message">Message</label> -->
-                        <textarea id="message" name="message" placeholder="Type your message" class="contact-input"
+                        <textarea id="message" name="message" placeholder="Type your message" data-i18n-placeholder="contact_message" class="contact-input"
                             required></textarea>
                     </div>
                     <div class="form-actions">
-                        <input type="submit" value="Send" class="blue-btn-soft">
-                        <input type="reset" value="Clear" class="blue-btn-neon">
+                        <button type="submit" class="blue-btn-soft" data-i18n-value="contact_send">Send</button>
+                        <button type="reset" class="blue-btn-neon" data-i18n-value="contact_clear">Clear</button>
                     </div>
                 </form>
                 <div class="contact-right">
-                    <h1>Contact Information</h1>
-                    <h3>To get in touch with me directly:</h3>
+                    <h1 data-i18n="contact_info_title">Contact Information</h1>
+                    <h3 data-i18n="contact_info_subtitle">To get in touch with me directly:</h3>
                     <p><i class="ri-mail-fill"></i> mahmutcanerarslan@gmail.com</p>
                     <p><i class="ri-phone-fill"></i> +90 538 562 49 28</p>
 
                     <div class="contact-right-btns">
                         <button class="blue-btn-soft"
                             onclick="window.open('https://github.com/mcanerarslan', '_blank')"><i
-                                class="ri-github-fill"></i> Github</button>
+                                class="ri-github-fill"></i> <span data-i18n="contact_github">Github</span></button>
                         <button class="blue-btn-outline"
                             onclick="window.open('https://linkedin.com/in/mcanerarslan', '_blank')"><i
-                                class="ri-linkedin-box-fill"></i> Linkedin</button>
+                                class="ri-linkedin-box-fill"></i> <span data-i18n="contact_linkedin">Linkedin</span></button>
                     </div>
                 </div>
             </div>
@@ -347,7 +331,8 @@
             <a href="#" class="social-link"><i class="ri-whatsapp-line"></i></a> -->
         </div>
         <div id="footer-text">
-            <p>© 2026 Mahmut Caner Arslan. All rights reserved.</p>
+            <p data-i18n="footer_rights">© 2026 Mahmut Caner Arslan. All rights reserved.</p>
+            <p><a class="footer-admin-link" href="admin.html" data-i18n="footer_admin">Admin panel</a></p>
         </div>
 
     </footer>

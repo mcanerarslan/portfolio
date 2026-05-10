@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/favicon.ico">
     <script>
         (function () {
@@ -19,7 +20,7 @@
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
     <link rel="stylesheet" href="style.css">
-    <title>PROJECTS</title>
+    <title data-i18n="page_title_projects">PROJECTS</title>
     <script src="site.js" defer></script>
 </head>
 
@@ -28,45 +29,48 @@
         <a href="index.html">
             <h1>M. Caner Arslan</h1>
         </a>
-        <button class="hamburger" aria-label="Toggle navigation">
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <nav>
-            <a href="index.html#pages">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#skill">Skill</a>
-            <a href="index.html#project">Projects</a>
-            <a href="index.html#experience">Experience</a>
-            <a href="index.html#contact">Contact</a>
+        <nav id="nav-menu">
+            <a href="index.html#pages" data-i18n="nav_home">Home</a>
+            <a href="index.html#about" data-i18n="nav_about">About</a>
+            <a href="index.html#skill" data-i18n="nav_skill">Skill</a>
+            <a href="index.html#project" data-i18n="nav_projects">Projects</a>
+            <a href="index.html#experience" data-i18n="nav_experience">Experience</a>
+            <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
         </nav>
-        <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
-            <span class="theme-toggle__icon" aria-hidden="true"><i class="ri-moon-line"></i></span>
-            <span class="theme-toggle__label">Night</span>
-        </button>
+        <div class="header-actions">
+            <div class="lang-toggle" role="group" aria-label="Language switcher">
+                <button type="button" data-lang-option="tr">TR</button>
+                <span class="lang-separator" aria-hidden="true">/</span>
+                <button type="button" data-lang-option="en">EN</button>
+            </div>
+            <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+                <span class="theme-toggle__icon" aria-hidden="true"><i class="ri-moon-line"></i></span>
+                <span class="theme-toggle__label">Night</span>
+            </button>
+        </div>
     </header>
     <div id="pages">
 
 
         <section id="project">
-            <h1 class="section-title">Projects</h1>
-            <p class="section-paragraph">Some current projects I'm working on.</p>
+            <h1 class="section-title" data-i18n="projects_title">Projects</h1>
+            <p class="section-paragraph" data-i18n="projects_subtitle">Some current projects I'm working on.</p>
             <div class="project-container">
                 <div class="project-card">
-                    <div class="project-card-title">Tic-Tac-Toe Java Swing</div>
+                    <div class="project-card-title" data-i18n="project_1_title">Tic-Tac-Toe Java Swing</div>
                     <div class="project-card-description">
-                        OOP & GUI Development<br>
-
-                        A modern desktop implementation of the classic Tic-Tac-Toe game built with Java. This project
-                        emphasizes robust game logic and responsive UI design. Key features include real-time
-                        win-condition algorithms, interactive grid buttons, and a polished aesthetic that moves beyond
-                        the standard Java look-and-feel.
+                        <p data-i18n="project_1_kicker">OOP & GUI Development</p>
+                        <p data-i18n="project_1_desc">A modern desktop implementation of the classic Tic-Tac-Toe game built with Java. This project emphasizes robust game logic and responsive UI design. Key features include real-time win-condition algorithms, interactive grid buttons, and a polished aesthetic that moves beyond the standard Java look-and-feel.</p>
                     </div>
                     <div class="project-tags">
-                        <span>Java</span>
-                        <span>Swing</span>
-                        <span>OOP</span>
+                        <span data-i18n="project_1_tag_1">Java</span>
+                        <span data-i18n="project_1_tag_2">Swing</span>
+                        <span data-i18n="project_1_tag_3">OOP</span>
                     </div>
                     <div class="project-card-buttons">
                         <div class="project-github-link"
@@ -75,21 +79,17 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-card-title">Fishing Simulator (Java Swing)</div>
+                    <div class="project-card-title" data-i18n="project_2_title">Fishing Simulator (Java Swing)</div>
                     <div class="project-card-description">
-                        Desktop-based Simulation & Economy Engine<br>
-
-                        An interactive desktop application that simulates a fishing ecosystem. Built with Java Swing, it
-                        includes a fully functional store for equipment, player statistics tracking, and persistent data
-                        storage. This project showcases the ability to transform complex back-end logic into a
-                        user-friendly graphical interface.
+                        <p data-i18n="project_2_kicker">Desktop-based Simulation & Economy Engine</p>
+                        <p data-i18n="project_2_desc">An interactive desktop application that simulates a fishing ecosystem. Built with Java Swing, it includes a fully functional store for equipment, player statistics tracking, and persistent data storage. This project showcases the ability to transform complex back-end logic into a user-friendly graphical interface.</p>
                     </div>
                     <div class="project-tags">
-                        <span>Java</span>
-                        <span>Swing</span>
-                        <span>File I/O</span>
-                        <span>OOP</span>
-                        <span>Game Economy</span>
+                        <span data-i18n="project_2_tag_1">Java</span>
+                        <span data-i18n="project_2_tag_2">Swing</span>
+                        <span data-i18n="project_2_tag_3">File I/O</span>
+                        <span data-i18n="project_2_tag_4">OOP</span>
+                        <span data-i18n="project_2_tag_5">Game Economy</span>
                     </div>
                     <div class="project-card-buttons">
                         <div class="project-github-link"
@@ -98,18 +98,15 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-card-title">Python Vocabulary Trainer</div>
+                    <div class="project-card-title" data-i18n="project_3_title">Python Vocabulary Trainer</div>
                     <div class="project-card-description">
-                        Python-Based Educational Automation<br>
-
-                        A lightweight Python application for efficient memorization. Features dynamic question sampling,
-                        real-time validation, and session summaries. Showcases clean scripting, modular loops, and
-                        stylized terminal UX for a focused learning experience.
+                        <p data-i18n="project_3_kicker">Python-Based Educational Automation</p>
+                        <p data-i18n="project_3_desc">A lightweight Python application for efficient memorization. Features dynamic question sampling, real-time validation, and session summaries. Showcases clean scripting, modular loops, and stylized terminal UX for a focused learning experience.</p>
                     </div>
                     <div class="project-tags">
-                        <span>Python</span>
-                        <span>Automation</span>
-                        <span>Data Structures</span>
+                        <span data-i18n="project_3_tag_1">Python</span>
+                        <span data-i18n="project_3_tag_2">Automation</span>
+                        <span data-i18n="project_3_tag_3">Data Structures</span>
                     </div>
                     <div class="project-card-buttons">
                         <div class="project-github-link"
@@ -137,7 +134,8 @@
             <a href="#" class="social-link"><i class="ri-whatsapp-line"></i></a> -->
         </div>
         <div id="footer-text">
-            <p>© 2026 Mahmut Caner Arslan. All rights reserved.</p>
+            <p data-i18n="footer_rights">© 2026 Mahmut Caner Arslan. All rights reserved.</p>
+            <p><a class="footer-admin-link" href="admin.html" data-i18n="footer_admin">Admin panel</a></p>
         </div>
 
     </footer>
