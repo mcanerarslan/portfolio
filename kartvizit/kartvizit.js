@@ -60,11 +60,11 @@ document.getElementById('save-contact').addEventListener('click', () => {
 
 document.getElementById('share-card').addEventListener('click', async () => {
   const status = document.getElementById('share-status');
-  const shareData = { title: `${name} | Dijital Kartvizit`, url: window.location.href };
+  const shareText = 'M. Caner Arslan - Dijital Kartvizit\nhttps://mcanerarslan.com.tr/kartvizit/';
 
   if (navigator.share) {
     try {
-      await navigator.share(shareData);
+      await navigator.share({ text: shareText });
       status.textContent = '';
       return;
     } catch (error) {
@@ -73,10 +73,10 @@ document.getElementById('share-card').addEventListener('click', async () => {
   }
 
   try {
-    status.textContent = await copyText(shareData.url)
-      ? 'Kartvizit bağlantısı kopyalandı.'
-      : 'Bağlantıyı adres çubuğundan kopyalayabilirsiniz.';
+    status.textContent = await copyText(shareText)
+      ? 'Kartvizit bilgileri kopyalandı.'
+      : 'Kartvizit bilgileri kopyalanamadı.';
   } catch (error) {
-    status.textContent = 'Bağlantıyı adres çubuğundan kopyalayabilirsiniz.';
+    status.textContent = 'Kartvizit bilgileri kopyalanamadı.';
   }
 });
