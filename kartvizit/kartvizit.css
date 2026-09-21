@@ -19,6 +19,17 @@ body {
 
 button, a { -webkit-tap-highlight-color: transparent; }
 
+.intro { position: fixed; inset: 0; z-index: 50; pointer-events: none; }
+.intro-panel { position: absolute; left: 0; right: 0; height: 50%; background: linear-gradient(135deg, #142034, #273a5c); will-change: transform; }
+.intro-top { top: 0; border-bottom: 1px solid rgba(164, 186, 240, .65); animation: intro-up .9s cubic-bezier(.77, 0, .175, 1) .6s forwards; }
+.intro-bottom { bottom: 0; border-top: 1px solid rgba(164, 186, 240, .65); animation: intro-down .9s cubic-bezier(.77, 0, .175, 1) .6s forwards; }
+.intro-name { position: absolute; top: 50%; left: 50%; width: max-content; transform: translate(-50%, -50%); color: #fff; font-size: clamp(18px, 4vw, 28px); font-weight: 800; letter-spacing: .1em; text-align: center; text-shadow: 0 3px 20px rgba(0, 0, 0, .3); animation: intro-name-out .25s ease .55s forwards; }
+
+@keyframes intro-up { to { transform: translateY(-101%); } }
+@keyframes intro-down { to { transform: translateY(101%); } }
+@keyframes intro-name-out { to { opacity: 0; } }
+@keyframes card-reveal { from { opacity: .7; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+
 .card {
   position: relative;
   width: min(100%, 440px);
@@ -26,6 +37,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   border-radius: 24px;
   background: #fff;
   box-shadow: 0 20px 55px rgba(33, 54, 85, .12);
+  animation: card-reveal .6s ease .9s both;
 }
 
 .card-header {
@@ -147,4 +159,9 @@ footer { padding: 17px 20px; border-top: 1px solid #e4ebf4; color: #8190a7; text
   .payment { margin-left: 20px; margin-right: 20px; }
   .card-share { padding-left: 20px; padding-right: 20px; }
   .identity h1 { font-size: 25px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro { display: none; }
+  .card { animation: none; }
 }
