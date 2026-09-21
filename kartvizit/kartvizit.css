@@ -1,0 +1,145 @@
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #192338;
+  background: #eaf1fb;
+  font-synthesis: none;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px 16px 48px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: radial-gradient(circle at 50% 0, #f8fbff 0, #eaf1fb 70%);
+}
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.card {
+  position: relative;
+  width: min(100%, 440px);
+  overflow: hidden;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 20px 55px rgba(33, 54, 85, .12);
+}
+
+.card-header {
+  height: 140px;
+  padding-top: 25px;
+  text-align: center;
+  background: linear-gradient(135deg, #142034, #273a5c);
+  color: #fff;
+}
+
+.brand { font-size: 19px; font-weight: 800; letter-spacing: .055em; }
+.brand span { display: block; margin-top: 3px; font-size: 9px; font-weight: 600; letter-spacing: .22em; opacity: .75; }
+
+.avatar {
+  position: relative;
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: -60px auto 0;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 43%;
+  box-shadow: 0 8px 20px rgba(29, 44, 77, .17);
+}
+
+.identity { padding: 20px 24px 0; text-align: center; }
+.identity h1 { margin: 0; font-size: 27px; line-height: 1.25; }
+.identity p { margin: 5px 0 0; color: #64748b; font-size: 14px; font-weight: 500; line-height: 1.5; }
+
+.divider { height: 1px; margin: 22px 40px 16px; background: linear-gradient(90deg, transparent, #dde5f0, transparent); }
+.details, .actions { padding: 0 28px; }
+.details { display: grid; gap: 10px; }
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 72px;
+  padding: 11px 16px;
+  border-radius: 16px;
+  background: #f5f8fd;
+  color: inherit;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+.detail:hover { background: #edf3fc; transform: translateY(-2px); }
+.detail:focus-visible, .action:focus-visible, .share:focus-visible, .copy-button:focus-visible { outline: 3px solid #4679ef; outline-offset: 3px; }
+.detail-icon { flex: 0 0 43px; height: 43px; display: grid; place-items: center; border-radius: 13px; background: #fff; box-shadow: 0 1px 3px rgba(20, 32, 52, .08); }
+.detail-icon svg { width: 19px; height: 19px; }
+.phone-icon { color: #16a366; }
+.email-icon { color: #e55465; }
+.detail-copy { display: grid; min-width: 0; }
+.detail-label { color: #8392ab; font-size: 11px; font-weight: 700; letter-spacing: .09em; }
+.detail-value { overflow-wrap: anywhere; font-size: 14px; font-weight: 600; }
+.chevron { margin-left: auto; color: #8392ab; font-size: 27px; font-weight: 300; }
+
+.payment { margin: 24px 28px 0; padding: 17px 16px 9px; border: 1px solid #e3eaf4; border-radius: 16px; }
+.payment h2 { margin: 0 0 10px; color: #27374f; font-size: 15px; }
+.payment-row { display: flex; align-items: center; gap: 10px; justify-content: space-between; padding: 10px 0; }
+.payment-row + .payment-row { border-top: 1px solid #edf1f7; }
+.payment-copy { display: grid; min-width: 0; gap: 2px; }
+.payment-value { color: #192338; font-size: 13px; font-weight: 600; overflow-wrap: anywhere; }
+.iban { font-variant-numeric: tabular-nums; letter-spacing: .015em; }
+.copy-button { flex: 0 0 auto; padding: 8px 10px; border: 1px solid #dbe4f2; border-radius: 9px; background: #f5f8fd; color: #315aab; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
+.copy-button:hover { background: #eaf2ff; }
+.payment-status { min-height: 1em; margin: 2px 0 0; color: #367a51; font-size: 12px; }
+.payment-status:empty { display: none; }
+.card-share { padding: 14px 28px 20px; }
+.card-share .share {
+  width: 100%;
+  min-height: 47px;
+  border: 1px solid #dbe4f2;
+  border-radius: 13px;
+  background: #f5f8fd;
+  font-weight: 700;
+}
+.card-share .status { margin: 0; }
+
+.actions { display: grid; gap: 10px; padding-top: 24px; }
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 47px;
+  border: 0;
+  border-radius: 13px;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: filter .2s, transform .2s;
+}
+.action:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.action svg, .share svg { width: 17px; height: 17px; }
+.save { background: #172236; }
+.call { background: #20a043; }
+.instagram { background: linear-gradient(110deg, #6548d7, #c53191 55%, #ee694d); }
+.sahibinden { background: #ffdb25; color: #202633; }
+.share { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 56px; border: 0; background: transparent; color: #344156; font: inherit; font-size: 14px; cursor: pointer; }
+.share:hover { color: #315fe4; }
+.status { min-height: 1em; margin: -9px 0 16px; text-align: center; color: #4f6685; font-size: 12px; }
+.status:empty { display: none; }
+
+footer { padding: 17px 20px; border-top: 1px solid #e4ebf4; color: #8190a7; text-align: center; font-size: 12px; }
+
+@media (max-width: 480px) {
+  body { padding: 0; background: #fff; }
+  .card { min-height: 100vh; border-radius: 0; box-shadow: none; }
+  .details, .actions { padding-left: 20px; padding-right: 20px; }
+  .payment { margin-left: 20px; margin-right: 20px; }
+  .card-share { padding-left: 20px; padding-right: 20px; }
+  .identity h1 { font-size: 25px; }
+}

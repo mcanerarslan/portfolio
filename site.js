@@ -132,37 +132,6 @@
       contact_github: 'Github',
       contact_linkedin: 'Linkedin',
       footer_rights: '© 2026 Mahmut Caner Arslan. All rights reserved.',
-      footer_admin: 'Admin panel',
-      admin_total: 'Total',
-      admin_featured: 'Featured',
-      admin_storage: 'Storage',
-      projects_github: 'GitHub',
-      projects_live: 'Live',
-      admin_kicker: 'Portfolio Admin',
-      admin_title: 'Project Manager',
-      admin_subtitle:
-        'Add, edit, remove, and feature your projects from one place. Changes are stored in this browser and immediately reflected on the public site.',
-      admin_unlock_title: 'Unlock Admin',
-      admin_unlock_subtitle: 'Enter the admin pin to manage the project library.',
-      admin_pin: 'Admin pin',
-      admin_unlock: 'Unlock',
-      admin_unlock_hint: 'Enter your admin pin to unlock the panel.',
-      admin_editor_kicker: 'Editor',
-      admin_add_project: 'Add Project',
-      admin_edit_project: 'Edit Project',
-      admin_lock: 'Lock',
-      admin_title_placeholder: 'Project title',
-      admin_description_placeholder: 'Project description',
-      admin_tags_placeholder: 'Tags, separated by commas',
-      admin_github_placeholder: 'GitHub URL',
-      admin_live_placeholder: 'Live demo URL',
-      admin_featured: 'Feature on home page',
-      admin_save: 'Save Project',
-      admin_cancel: 'Cancel',
-      admin_reset: 'Reset Demo Data',
-      admin_library_kicker: 'Library',
-      admin_library_title: 'Saved Projects',
-      admin_back: 'Back to site',
     },
     tr: {
       nav_home: 'Ana Sayfa',
@@ -293,37 +262,6 @@
       contact_github: 'Github',
       contact_linkedin: 'Linkedin',
       footer_rights: '© 2026 Mahmut Caner Arslan. Tüm hakları saklıdır.',
-      footer_admin: 'Yönetim paneli',
-      admin_total: 'Toplam',
-      admin_featured: 'Öne çıkan',
-      admin_storage: 'Depolama',
-      projects_github: 'GitHub',
-      projects_live: 'Canlı',
-      admin_kicker: 'Portföy Yönetimi',
-      admin_title: 'Proje Yöneticisi',
-      admin_subtitle:
-        'Projelerini tek yerden ekle, düzenle, sil ve öne çıkar. Değişiklikler bu tarayıcıda saklanır ve anında herkese açık siteye yansır.',
-      admin_unlock_title: 'Paneli Aç',
-      admin_unlock_subtitle: 'Proje kütüphanesini yönetmek için admin pinini gir.',
-      admin_pin: 'Admin pini',
-      admin_unlock: 'Aç',
-      admin_unlock_hint: 'Paneli açmak için admin pinini gir.',
-      admin_editor_kicker: 'Düzenleyici',
-      admin_add_project: 'Proje Ekle',
-      admin_edit_project: 'Projeyi Düzenle',
-      admin_lock: 'Kilitle',
-      admin_title_placeholder: 'Proje başlığı',
-      admin_description_placeholder: 'Proje açıklaması',
-      admin_tags_placeholder: 'Etiketler, virgülle ayır',
-      admin_github_placeholder: 'GitHub bağlantısı',
-      admin_live_placeholder: 'Canlı demo bağlantısı',
-      admin_featured: 'Ana sayfada öne çıkar',
-      admin_save: 'Projeyi Kaydet',
-      admin_cancel: 'İptal',
-      admin_reset: 'Demo Verisini Sıfırla',
-      admin_library_kicker: 'Kütüphane',
-      admin_library_title: 'Kaydedilmiş Projeler',
-      admin_back: 'Siteye dön',
     },
   };
 
@@ -549,11 +487,6 @@
 
     if (themeToggle) {
       themeToggle.setAttribute('aria-label', getTheme() === 'light' ? t('theme_switch_dark') : t('theme_switch_light'));
-    }
-
-    const adminFormTitle = document.querySelector('#project-form-title');
-    if (adminFormTitle && adminFormTitle.dataset.i18nDynamic === 'project-form-title') {
-      adminFormTitle.textContent = adminFormTitle.dataset.i18nEdit === 'true' ? t('admin_edit_project') : t('admin_add_project');
     }
 
     startHeroTitleRotation();
