@@ -105,29 +105,34 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .card-share .status { margin: 0; }
 
-.actions { display: grid; gap: 10px; padding-top: 24px; }
+.actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding-top: 24px; }
 .action {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 47px;
+  min-width: 0;
+  min-height: 54px;
+  padding: 8px;
   border: 0;
   border-radius: 13px;
   color: #fff;
   font: inherit;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
   text-decoration: none;
   cursor: pointer;
   transition: filter .2s, transform .2s;
 }
 .action:hover { filter: brightness(1.08); transform: translateY(-1px); }
-.action svg, .share svg { width: 17px; height: 17px; }
+.action svg, .share svg { flex: 0 0 17px; width: 17px; height: 17px; }
 .save { background: #172236; }
 .call { background: #20a043; }
+.whatsapp { background: #128c7e; }
 .instagram { background: linear-gradient(110deg, #6548d7, #c53191 55%, #ee694d); }
-.sahibinden { background: #ffdb25; color: #202633; }
+.sahibinden { grid-column: 1 / -1; background: #ffdb25; color: #202633; }
 .share { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 56px; border: 0; background: transparent; color: #344156; font: inherit; font-size: 14px; cursor: pointer; }
 .share:hover { color: #315fe4; }
 .status { min-height: 1em; margin: -9px 0 16px; text-align: center; color: #4f6685; font-size: 12px; }
