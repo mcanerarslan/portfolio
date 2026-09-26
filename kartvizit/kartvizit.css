@@ -186,37 +186,52 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .card-share .status { margin: 0; }
 
-.actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding-top: 24px; }
-.action {
+.actions {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  min-width: 0;
-  min-height: 54px;
-  padding: 8px;
-  border: 0;
-  border-radius: 13px;
-  color: #fff;
-  font: inherit;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: filter .2s, transform .2s;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 24px 28px 0;
 }
-.action:hover { filter: brightness(1.08); transform: translateY(-1px); }
-.action svg, .share svg { flex: 0 0 17px; width: 17px; height: 17px; }
-.save { background: #172236; }
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  padding: 0;
+  border: 0;
+  border-radius: 14px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(20, 32, 52, .12);
+  transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
+}
+.action:hover {
+  transform: translateY(-3px) scale(1.06);
+  filter: brightness(1.08);
+  box-shadow: 0 6px 18px rgba(20, 32, 52, .2);
+}
+.action:active {
+  transform: scale(.95);
+}
+.action svg {
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
+}
+.save { background: #142034; }
 .call { background: #20a043; }
-.whatsapp { background: #128c7e; }
-.instagram { background: linear-gradient(110deg, #6548d7, #c53191 55%, #ee694d); }
-.github { background: #24292e; }
+.whatsapp { background: #25d366; }
+.instagram { background: linear-gradient(135deg, #4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75); }
 .linkedin { background: #0a66c2; }
-.sahibinden { grid-column: 1 / -1; background: #ffdb25; color: #202633; }
+.github { background: #181717; }
+.sahibinden { background: #ffdb25; color: #192338; }
 .share { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 56px; border: 0; background: transparent; color: #344156; font: inherit; font-size: 14px; cursor: pointer; }
+.share svg { flex: 0 0 17px; width: 17px; height: 17px; }
 .share:hover { color: #315fe4; }
 .status { min-height: 1em; margin: -9px 0 16px; text-align: center; color: #4f6685; font-size: 12px; }
 .status:empty { display: none; }
