@@ -14,13 +14,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: #0f172a;
+  background-color: #f0f4f9;
   background-image:
-    radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.45) 0%, transparent 45%),
-    radial-gradient(circle at 85% 18%, rgba(139, 92, 246, 0.5) 0%, transparent 45%),
-    radial-gradient(circle at 80% 85%, rgba(236, 72, 153, 0.38) 0%, transparent 42%),
-    radial-gradient(circle at 18% 85%, rgba(14, 165, 233, 0.38) 0%, transparent 45%),
-    linear-gradient(140deg, #0d1527 0%, #1e1b4b 50%, #0d1527 100%);
+    radial-gradient(circle at 12% 15%, rgba(199, 210, 254, 0.65) 0%, transparent 45%),
+    radial-gradient(circle at 88% 12%, rgba(186, 230, 253, 0.7) 0%, transparent 45%),
+    radial-gradient(circle at 82% 85%, rgba(251, 207, 232, 0.55) 0%, transparent 42%),
+    radial-gradient(circle at 15% 85%, rgba(254, 215, 170, 0.45) 0%, transparent 42%),
+    linear-gradient(135deg, #f4f7fb 0%, #e9eef7 50%, #f6f3ff 100%);
   background-attachment: fixed;
 }
 
@@ -43,7 +43,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   overflow: hidden;
   border-radius: 26px;
   background: #fff;
-  box-shadow: 0 25px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(255, 255, 255, .08);
+  box-shadow: 0 20px 55px rgba(33, 54, 85, .14), 0 0 1px rgba(33, 54, 85, .08);
   animation: card-reveal .6s ease .9s both;
 }
 
@@ -291,7 +291,7 @@ footer { padding: 17px 20px; border-top: 1px solid #e4ebf4; color: #8190a7; text
 
 @media (max-width: 480px) {
   body { padding: 16px 12px 40px; }
-  .card { border-radius: 24px; box-shadow: 0 18px 45px rgba(0, 0, 0, .3); }
+  .card { border-radius: 24px; box-shadow: 0 16px 45px rgba(33, 54, 85, .12); }
   .details, .actions { padding-left: 20px; padding-right: 20px; }
   .payment, .payment-section { margin-left: 20px; margin-right: 20px; }
   .card-share { padding-left: 20px; padding-right: 20px; }
