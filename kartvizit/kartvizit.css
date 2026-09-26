@@ -228,8 +228,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
   color: #fff;
 }
 .action-wide.sahibinden {
-  background: #ffdb25;
-  color: #192338;
+  background: #ffeb00;
+  color: #000;
+  font-weight: 800;
+}
+.action-wide.sahibinden svg {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
 }
 
 .social-icons {
