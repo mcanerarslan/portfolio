@@ -32,56 +32,56 @@ button, a { -webkit-tap-highlight-color: transparent; }
   left: 0;
   right: 0;
   height: 50%;
-  background: linear-gradient(135deg, #0b111e 0%, #131c2e 50%, #1a253a 100%);
   will-change: transform;
 }
 .intro-top {
   top: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  animation: intro-up 0.9s cubic-bezier(0.76, 0, 0.24, 1) 0.8s forwards;
+  background: radial-gradient(circle at 50% 100%, #223a5e 0%, #122036 55%, #09101d 100%);
+  animation: intro-up 0.95s cubic-bezier(0.76, 0, 0.24, 1) 0.85s forwards;
 }
 .intro-bottom {
   bottom: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
-  animation: intro-down 0.9s cubic-bezier(0.76, 0, 0.24, 1) 0.8s forwards;
+  background: radial-gradient(circle at 50% 0%, #1c3050 0%, #0e192a 55%, #070d17 100%);
+  animation: intro-down 0.95s cubic-bezier(0.76, 0, 0.24, 1) 0.85s forwards;
 }
 .intro-brand {
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   width: max-content;
   text-align: center;
   z-index: 2;
-  animation: intro-brand-out 0.3s ease 0.7s forwards;
+  animation: intro-brand-out 0.35s ease 0.75s forwards;
 }
 .intro-name {
-  font-size: clamp(18px, 4vw, 26px);
-  font-weight: 800;
-  letter-spacing: 0.22em;
+  font-size: clamp(24px, 5.5vw, 36px);
+  font-weight: 900;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #ffffff;
-  text-shadow: 0 2px 25px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(180deg, #ffffff 10%, #e2e8f0 65%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.75));
   animation: intro-text-fade 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 .intro-sub {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.32em;
+  font-size: clamp(10px, 2.2vw, 13px);
+  font-weight: 700;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
-  color: #94a3b8;
-  opacity: 0.85;
-  animation: intro-text-fade 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+  color: #7dd3fc;
+  text-shadow: 0 2px 12px rgba(125, 211, 252, 0.35);
+  animation: intro-text-fade 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.06s both;
 }
 
 @keyframes intro-text-fade {
-  from { opacity: 0; transform: translateY(6px); }
+  from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
 @keyframes intro-brand-out {
