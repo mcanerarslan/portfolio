@@ -85,7 +85,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transition: background .2s, transform .2s;
 }
 .detail:hover { background: #edf3fc; transform: translateY(-2px); }
-.detail:focus-visible, .action:focus-visible, .share:focus-visible, .copy-button:focus-visible, .payment-toggle:focus-visible { outline: 3px solid #4679ef; outline-offset: 3px; }
+.detail:focus-visible, .action-wide:focus-visible, .social-icon:focus-visible, .share:focus-visible, .copy-button:focus-visible, .payment-toggle:focus-visible { outline: 3px solid #4679ef; outline-offset: 3px; }
 .detail-icon { flex: 0 0 43px; height: 43px; display: grid; place-items: center; border-radius: 13px; background: #fff; box-shadow: 0 1px 3px rgba(20, 32, 52, .08); }
 .detail-icon svg { width: 19px; height: 19px; }
 .phone-icon { color: #16a366; }
@@ -188,48 +188,86 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .actions {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   gap: 12px;
-  flex-wrap: wrap;
   padding: 24px 28px 0;
 }
-.action {
+.action-wide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 14px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(20, 32, 52, .1);
+  transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
+}
+.action-wide:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 0 6px 18px rgba(20, 32, 52, .16);
+}
+.action-wide:active {
+  transform: scale(.98);
+}
+.action-wide svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+.action-wide.save {
+  background: #142034;
+  color: #fff;
+}
+.action-wide.sahibinden {
+  background: #ffdb25;
+  color: #192338;
+}
+
+.social-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+.social-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  flex: 0 0 50px;
-  padding: 0;
+  height: 52px;
   border: 0;
   border-radius: 14px;
   color: #fff;
-  cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(20, 32, 52, .12);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(20, 32, 52, .1);
   transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
 }
-.action:hover {
-  transform: translateY(-3px) scale(1.06);
+.social-icon:hover {
+  transform: translateY(-2px) scale(1.05);
   filter: brightness(1.08);
-  box-shadow: 0 6px 18px rgba(20, 32, 52, .2);
+  box-shadow: 0 6px 16px rgba(20, 32, 52, .18);
 }
-.action:active {
+.social-icon:active {
   transform: scale(.95);
 }
-.action svg {
-  width: 23px;
-  height: 23px;
-  flex: 0 0 23px;
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
 }
-.save { background: #142034; }
-.call { background: #20a043; }
-.whatsapp { background: #25d366; }
-.instagram { background: linear-gradient(135deg, #4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75); }
-.linkedin { background: #0a66c2; }
-.github { background: #181717; }
-.sahibinden { background: #ffdb25; color: #192338; }
+.social-icon.whatsapp { background: #25d366; }
+.social-icon.instagram { background: linear-gradient(135deg, #4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75); }
+.social-icon.linkedin { background: #0a66c2; }
+.social-icon.github { background: #181717; }
 .share { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 56px; border: 0; background: transparent; color: #344156; font: inherit; font-size: 14px; cursor: pointer; }
 .share svg { flex: 0 0 17px; width: 17px; height: 17px; }
 .share:hover { color: #315fe4; }
