@@ -36,6 +36,21 @@ document.querySelectorAll('[data-copy]').forEach((button) => {
   });
 });
 
+const paymentToggle = document.getElementById('payment-toggle');
+const paymentContent = document.getElementById('payment-content');
+const paymentSection = document.getElementById('payment-section');
+
+if (paymentToggle && paymentContent) {
+  paymentToggle.addEventListener('click', () => {
+    const isExpanded = paymentToggle.getAttribute('aria-expanded') === 'true';
+    paymentToggle.setAttribute('aria-expanded', String(!isExpanded));
+    paymentContent.hidden = isExpanded;
+    if (paymentSection) {
+      paymentSection.classList.toggle('open', !isExpanded);
+    }
+  });
+}
+
 document.getElementById('save-contact').addEventListener('click', () => {
   const vcard = [
     'BEGIN:VCARD',

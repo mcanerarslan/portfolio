@@ -85,7 +85,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transition: background .2s, transform .2s;
 }
 .detail:hover { background: #edf3fc; transform: translateY(-2px); }
-.detail:focus-visible, .action:focus-visible, .share:focus-visible, .copy-button:focus-visible { outline: 3px solid #4679ef; outline-offset: 3px; }
+.detail:focus-visible, .action:focus-visible, .share:focus-visible, .copy-button:focus-visible, .payment-toggle:focus-visible { outline: 3px solid #4679ef; outline-offset: 3px; }
 .detail-icon { flex: 0 0 43px; height: 43px; display: grid; place-items: center; border-radius: 13px; background: #fff; box-shadow: 0 1px 3px rgba(20, 32, 52, .08); }
 .detail-icon svg { width: 19px; height: 19px; }
 .phone-icon { color: #16a366; }
@@ -95,8 +95,77 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .detail-value { overflow-wrap: anywhere; font-size: 14px; font-weight: 600; }
 .chevron { margin-left: auto; color: #8392ab; font-size: 27px; font-weight: 300; }
 
-.payment { margin: 24px 28px 0; padding: 17px 16px 9px; border: 1px solid #e3eaf4; border-radius: 16px; }
-.payment h2 { margin: 0 0 10px; color: #27374f; font-size: 15px; }
+.payment-section {
+  margin: 20px 28px 0;
+  border: 1px solid #e3eaf4;
+  border-radius: 16px;
+  background: #fbfdff;
+  overflow: hidden;
+  transition: border-color .2s, box-shadow .2s;
+}
+.payment-section.open {
+  border-color: #c7d8ee;
+  box-shadow: 0 4px 16px rgba(39, 58, 92, .06);
+}
+.payment-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 13px 16px;
+  border: 0;
+  background: transparent;
+  color: #27374f;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  transition: background .2s;
+}
+.payment-toggle:hover {
+  background: #f0f5fc;
+}
+.payment-toggle-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.payment-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #eaf1fb;
+  color: #315aab;
+}
+.payment-icon svg {
+  width: 18px;
+  height: 18px;
+}
+.payment-chevron {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  color: #8392ab;
+  transition: transform .25s ease;
+}
+.payment-chevron svg {
+  width: 18px;
+  height: 18px;
+}
+.payment-section.open .payment-chevron {
+  transform: rotate(180deg);
+}
+.payment-content {
+  padding: 4px 16px 14px;
+  border-top: 1px solid #edf1f7;
+}
+.payment-content[hidden] {
+  display: none;
+}
 .payment-row { display: flex; align-items: center; gap: 10px; justify-content: space-between; padding: 10px 0; }
 .payment-row + .payment-row { border-top: 1px solid #edf1f7; }
 .payment-copy { display: grid; min-width: 0; gap: 2px; }
@@ -104,7 +173,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .iban { font-variant-numeric: tabular-nums; letter-spacing: .015em; }
 .copy-button { flex: 0 0 auto; padding: 8px 10px; border: 1px solid #dbe4f2; border-radius: 9px; background: #f5f8fd; color: #315aab; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
 .copy-button:hover { background: #eaf2ff; }
-.payment-status { min-height: 1em; margin: 2px 0 0; color: #367a51; font-size: 12px; }
+.payment-status { min-height: 1em; margin: 4px 0 0; color: #367a51; font-size: 12px; }
 .payment-status:empty { display: none; }
 .card-share { padding: 14px 28px 20px; }
 .card-share .share {
@@ -144,6 +213,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .call { background: #20a043; }
 .whatsapp { background: #128c7e; }
 .instagram { background: linear-gradient(110deg, #6548d7, #c53191 55%, #ee694d); }
+.github { background: #24292e; }
+.linkedin { background: #0a66c2; }
 .sahibinden { grid-column: 1 / -1; background: #ffdb25; color: #202633; }
 .share { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 56px; border: 0; background: transparent; color: #344156; font: inherit; font-size: 14px; cursor: pointer; }
 .share:hover { color: #315fe4; }
@@ -156,7 +227,7 @@ footer { padding: 17px 20px; border-top: 1px solid #e4ebf4; color: #8190a7; text
   body { padding: 0; background: #fff; }
   .card { min-height: 100vh; border-radius: 0; box-shadow: none; }
   .details, .actions { padding-left: 20px; padding-right: 20px; }
-  .payment { margin-left: 20px; margin-right: 20px; }
+  .payment, .payment-section { margin-left: 20px; margin-right: 20px; }
   .card-share { padding-left: 20px; padding-right: 20px; }
   .identity h1 { font-size: 25px; }
 }
